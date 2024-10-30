@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Cross-theme Stylesheets</title>
+</head>
+<body>
+<h1 id="Cross-themestylesheets">Cross-theme stylesheets</h1>
+<p>Cross-theme stylesheets is a plugin that allows you to add stylesheets to your blog that are independent of the theme.  If you have some CSS that you want to use regardless of the theme you've chosen (or your user has chosen, if you have a theme-switcher) you can create a stylesheet here, link it or import it, and have it apply to whatever media you choose.</p>
+<h2 id="Download">Download</h2>
+<p><a class="source" href="http://downloads.wordpress.org/plugin/stylesheets.zip">The latest version is 0.3</a>.</p>
+<h2 id="Howtoinstallit">How to install it</h2>
+<p>Cross-theme stylesheets is plug-and-play.</p>
+<ul>
+<li>Unzip the download.</li>
+<li>Add stylesheets.php to your wp-plugins directory.</li>
+<li>Activate it from the control panel.</li>
+</ul>
+<h2 id="Howtouseit">How to use it</h2>
+<p>Cross-theme stylesheets adds a page to the management menu, titled "Stylesheets."  By default you will have a single stylesheet named "my-styles".  You can change the name of this sheet, change the media associated with it, change whether it is imported or linked, and, of course, change the CSS used, all from the top section of the page.</p>
+<p>From the middle section you can add additional stylesheets, delete them, hide or show them, or select the stylesheet you want to edit.</p>
+<p>The bottom section contains some notes about how to use it.</p>
+<p>When a blog page is served, for each stylesheet you have created and allowed to remain visible, the page will have added to the head something similar to either this:</p>
+<pre>    &lt;style type="text/css"&gt;
+        @import url(http://my-blog.com/wp-content/plugins/stylesheets.php/my-styles.css) screen, projection;
+    &lt;/style&gt;</pre>
+<p>
+or this:
+</p>
+<pre>   &lt;link rel="stylesheet" type="text/css" media="screen, projection" 
+           href="http://my-blog.com/wp-content/plugins/stylesheets.php/my-styles.css" /&gt;</pre>
+<p>with the proper values substituted for your URL, the name you've chosen for the stylesheet, and your chosen media.</p>
+<h2 id="Problems">Problems</h2>
+<p>If you have a problem with the plugin, <strong>first</strong> make sure you have read <strong>all</strong> of the documentation on this page, and then feel free to email me at <strong>scott AT sauyet DOT com</strong>. If you have found a bug, or have a feature request, please <a class="ext-link" href="http://wordpress.org/extend/plugins/cross-theme-stylesheets/">let me know</a> about it.</p>
+<h2 id="MoreInfo">More Information</h2>
+<p>If you want to know more about the plugin, and the reason  I created it, you can check out the <a href="http://scott.sauyet.com/thoughts/archives/2005/03/15/stylesheets-plugin/">original article</a> discussing it.</p>
+<h2 id="Changelog">Changelog</h2>
+<ol>
+<li>Version 0.1 - <strong>Initial plugin release</strong></li>
+<li>Version 0.2 - <strong>Minor documentation tweaks</strong></li>
+<li>Version 0.3 - <strong>Moved remaining "style"-attributes from admin pages to stylesheet in head.</strong></li>
+</ol>
+
+</body>
+</html>
